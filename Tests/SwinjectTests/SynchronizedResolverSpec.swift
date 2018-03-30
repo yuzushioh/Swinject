@@ -46,7 +46,7 @@ class SynchronizedResolverSpec: QuickSpec {
                     let childResolver = Container(parent: parentContainer).synchronize()
 
                     onMultipleThreads(actions: [
-                        { _ = parentResolver.resolve(Animal.self) as! Cat },    // swiftlint:disable:this opening_brace
+                        { _ = parentResolver.resolve(Animal.self) as! Cat },
                         { _ = childResolver.resolve(Animal.self) as! Cat }
                     ])
                 }
